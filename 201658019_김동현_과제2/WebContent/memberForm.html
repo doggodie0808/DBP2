@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 창</title>
+<script type="text/javascript">
+function mySubmit(index){
+ 	if(index == 1) {
+ 		document.myForm.action='addMember';
+ 	}
+ 	if(index == 2) {
+ 		document.myForm.action='deleteMember';
+ 	}
+}
+</script>
+</head>
+
+<body>
+	<form name="myForm" method="post" encType="UTF-8">
+		아이디: <input type="text" name="id"> <br>
+		비밀번호: <input type="password" name="pwd"> <br>
+		이름: <input type="text" name="name">
+		<input type="submit" value="등록" onClick='mySubmit(1)' >
+		<input type="submit" value="삭제" onClick='mySubmit(2)' >
+	</form>
+</body>
+</html>
